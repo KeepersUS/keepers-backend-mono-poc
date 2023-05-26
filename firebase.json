@@ -1,0 +1,64 @@
+{
+  "database": {
+    "rules": "packages/backend1/database.rules.json"
+  },
+  "firestore": {
+    "rules": "packages/backend1/firestore.rules",
+    "indexes": "packages/backend1/firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "packages/backend1/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "storage": {
+    "rules": "packages/backend1/storage.rules"
+  },
+  "functions": {
+    "codebase": "backend1",
+    "predeploy": [
+      "npx nx build backend1"
+    ],
+    "runtime": "nodejs18",
+    "source": "dist/packages/backend1"
+  },
+  "emulators": {
+    "auth": {
+      "port": 9099
+    },
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "database": {
+      "port": 9000
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "pubsub": {
+      "port": 8085
+    },
+    "storage": {
+      "port": 9199
+    },
+    "eventarc": {
+      "port": 9299
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  }
+}
