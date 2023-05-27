@@ -70,7 +70,6 @@ export class RegisterCollection<T extends object> {
         .withConverter(this.converter<T>())
         .get();
     } else {
-      // TODO: fix this typing, this should not be any but it 'works' for now
       let colQuery = firestore().collection(
         this.collection
       ) as firestore.Query<firestore.DocumentData>;

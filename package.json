@@ -2,7 +2,10 @@
   "name": "backend-mono",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "emulators": "sh ./runEmulators.sh",
+    "sync-data": "sh ./syncData.sh"
+  },
   "private": true,
   "devDependencies": {
     "@nx/devkit": "16.2.2",
