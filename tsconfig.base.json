@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@keepers/is-even": ["packages/is-even/src/index.ts"]
+      "@keepers/shared": ["packages/shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

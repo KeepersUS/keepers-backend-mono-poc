@@ -1,0 +1,9 @@
+{
+  "name": "@keepers/shared",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "dependencies": {
+    "@usekeepers/keepers-shared": "^1.5.2",
+    "geofire-common": "^6.0.0"
+  }
+}
